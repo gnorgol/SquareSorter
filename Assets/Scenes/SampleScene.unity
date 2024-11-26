@@ -771,6 +771,7 @@ MonoBehaviour:
   intervalSquareSize: 0.3
   nb_square: 4
   ChoseBiggestFirst: 0
+  squarePrefab: {fileID: 8970285390753001919, guid: ad665fa2b6bc19c4886f18133ada97fd, type: 3}
   Camera: {fileID: 519420031}
   startButton: {fileID: 5599280485530581701}
   restartButton: {fileID: 173837246420453841}

@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private bool ChoseBiggestFirst = false;
 
+    public GameObject squarePrefab;
+
     private List<GameObject> instanciateSquares = new List<GameObject>();
 
     [SerializeField]
@@ -195,7 +197,7 @@ public class GameManager : MonoBehaviour
         float sizeCurrentSquare = MinSizeSquare;
         for (int i = 0; i < nb_square; i++)
         {
-            GameObject square = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            GameObject square = GameObject.Instantiate(squarePrefab);
             //random position inside the camera view
             Vector3 position = new Vector3(Random.Range(-Camera.orthographicSize + square.transform.localScale.x / 2, Camera.orthographicSize - square.transform.localScale.x / 2), Random.Range(-Camera.orthographicSize + square.transform.localScale.y / 2, Camera.orthographicSize - square.transform.localScale.y / 2), 0);
             //check if the position is not too close to another square
